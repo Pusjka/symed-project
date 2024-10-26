@@ -9,8 +9,8 @@ function DesktopLinks() {
     return (
         <div className={"desktopLinksAndLogo"}>
             <Link to={"/"}>
-                    <span className="material-symbols-outlined homeLogo">
-                        home_app_logo
+                    <span className="homeLogo">
+                        Symed
                     </span>
             </Link>
             {config.desktopLinks.map((link) => {
