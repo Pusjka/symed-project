@@ -1,14 +1,3 @@
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
 @media screen and (min-width: 901px) {
   .settings{
     display: flex;
@@ -22,30 +11,25 @@
       display: flex;
       align-items: center;
       margin: 0 0 0 35px;
-      animation: slideInFromRight 1.5s ease 0.4s backwards;
 
       div{
         text-transform: uppercase;
-        border-right: 2px solid #a1fff9;
-        border-left: 1px solid #a1fff9;
         padding: 7px;
         font-size: 20px;
         cursor: pointer;
         font-weight: 600;
-        transition: all 0.5s;
+        color: #1a1a1ad9;
+
+        &:first-of-type{
+          text-transform: uppercase;
+          border-right: 3px solid #bd1e22;
+          padding: 7px;
+          font-size: 20px;
+        }
       }
 
-      div:first-of-type{
-        text-transform: uppercase;
-        border-left: 2px solid #a1fff9;
-        border-right: 1px solid #a1fff9;
-        padding: 7px;
-        font-size: 20px;
-      }
-
-      div:hover{
-        text-shadow: 0px 0px 13px #a1fff9;
-        color: #a1fff9;
+      .active{
+        color: #000;
       }
     }
 
@@ -59,33 +43,19 @@
         height: 50px;
         width: 190px;
         border-radius: 30px;
-        border: 3px solid #a1fff9;
+        border: 3px solid #bd1e22;
         transition: 1s;
-        font-size: 24px;
+        font-size: 22px;
         text-transform: capitalize;
-        color: #fff;
+        color: #000;
         font-weight: bold;
         margin-right: 20px;
-        animation: slideInFromRight 1.5s ease 0.2s backwards;
+
+        &:hover{
+          background: #bd1e22;
+          color: #fff;
+        }
       }
-
-      .contactButton:hover{
-        background: #a1fff9;
-        color: #020a13;
-      }
-    }
-
-    .darkLightSwitcher{
-      margin-left: 20px;
-      font-size: 36px;
-      transition: 0.5s;
-      animation: slideInFromRight 1.5s ease 0.6s backwards;
-      cursor: pointer;
-    }
-
-    .darkLightSwitcher:hover{
-      text-shadow: 0 0 13px #a1fff9;
-      color: #a1fff9;
     }
   }
 }

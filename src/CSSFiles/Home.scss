@@ -1,17 +1,4 @@
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(100px);}
-  to   { opacity: 1; transform: translateY(0%);}
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
 @media screen and (min-width: 901px) {
-  .homePage>div{
-    //animation: fadeIn 1.5s ease 0.2s backwards;
-  }
 
   .homePage{
     display: flex;
@@ -20,126 +7,22 @@
     align-items: flex-start;
     width: auto;
     height: auto;
-    color: #fff;
+    color: #000;
     min-height: calc(100vh - 130px);
     padding: 0 20%;
-    //animation: fadeIn 1.5s ease 0.2s backwards;
     transition: 500ms;
     overflow: hidden;
-
-    .welcome{
-      color: #a1fff9;
-      font-size: 25px;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .myName{
-      text-transform: capitalize;
-      font-size: 65px;
-      line-height: 100px;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .homeSecondLine{
-      font-size: 65px;
-      color: rgba(255, 255, 255, 0.6);
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .someDescription{
-      font-size: 21px;
-      color: rgba(255, 255, 255, 0.6);
-      padding-top: 25px;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .homeSecondLine:first-letter, .welcome:first-letter, .someDescription:first-letter{
-      text-transform: capitalize;
-    }
-  }
-}
-
-@keyframes slideInFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(300px);
-    filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
   }
 }
 
 @media screen and (max-width: 900px) {
   .homePage{
-    height: calc(100% - 85px);
+    height: calc(100% - 105px);
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
     padding: 0 5% 0;
-    color: #fff;
-
-    .welcome{
-      color: #a1fff9;
-      font-size: 16px;
-      line-height: 1.1;
-      font-weight: 400;
-      margin: 0 0 20px;
-      //animation: slideInFromBottom 1.5s ease 0.2s backwards;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .myName{
-      text-transform: capitalize;
-      font-size: 34px;
-      line-height: 1.1;
-      font-weight: 600;
-      //animation: slideInFromBottom 1.5s ease 0.4s backwards;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .homeSecondLine{
-      margin-top: 10px;
-      line-height: 0.9;
-      font-size: 34px;
-      color: rgba(255, 255, 255, 0.6);
-      //animation: slideInFromBottom 1.5s ease 0.6s backwards;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
-
-    .someDescription{
-      margin: 20px 0 0;
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.6);
-      //animation: slideInFromBottom 1.5s ease 0.8s backwards;
-
-      span {
-        animation: blink 1s step-end infinite;
-      }
-    }
+    color: #000;
   }
 }

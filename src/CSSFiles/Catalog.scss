@@ -1,0 +1,122 @@
+@media screen and (min-width: 901px) {
+  .catalogPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: auto;
+    color: #fff;
+    min-height: calc(100vh - 130px);
+    padding: 0 15%;
+    overflow: hidden;
+
+    .products{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+
+      .productWindow{
+        display: flex;
+        color: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+        position: relative;
+
+        &:hover{
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        img{
+          width: 100%;
+        }
+
+        .productName{
+          width: 100%;
+          text-decoration: none;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+
+        .newProductPlank{
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background-color: #bd1e22;
+          color: #fff;
+          font-size: 0.8rem;
+          font-weight: 400;
+          padding: 3px 6px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .catalogPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: calc(100% - 105px);
+    color: #fff;
+    padding: 0 5%;
+    overflow: auto;
+
+    .products{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+
+      .productWindow{
+        display: flex;
+        color: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+        position: relative;
+
+        img{
+          width: 100%;
+        }
+
+        .productName{
+          width: 100%;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 5px;
+          font-size: 0.8rem;
+        }
+
+        .newProductPlank{
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          background-color: #bd1e22;
+          color: #fff;
+          font-size: 0.6rem;
+          font-weight: 400;
+          padding: 2px 5px;
+          border-radius: 3px
+        }
+      }
+    }
+  }
+}

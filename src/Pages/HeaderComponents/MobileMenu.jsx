@@ -7,7 +7,7 @@ import {useTranslation} from "react-i18next";
 function MobileMenu() {
     const [menuOpened, setMenuOpened] = useState(false)
     const { t, i18n } = useTranslation();
-    const languages = ["eng", "est", "rus"]
+    const languages = ["eng", "est"]
 
     function changeLanguage(lng) {
         i18n.changeLanguage(lng);
@@ -17,13 +17,13 @@ function MobileMenu() {
         <div className={"mobileMenu container nav-container"}>
             <div className={"menu"}>
                 <Link to={"/"} onClick={() => setMenuOpened(false)}>
-                    <span className="material-symbols-outlined homeLogo">
-                        home_app_logo
+                    <span className="homeLogo">
+                        <img src={'/Imgs/symed-logo.png'} alt="logo"/>
                     </span>
                 </Link>
             </div>
             <div>
-                <input className="checkbox" type="checkbox" name="" id="" checked={menuOpened} onChange={() => setMenuOpened(!menuOpened)}/>
+            <input className="checkbox" type="checkbox" name="" id="" checked={menuOpened} onChange={() => setMenuOpened(!menuOpened)}/>
                 <div className="hamburger-lines">
                     <span className="line line1"/>
                     <span className="line line2"/>
@@ -34,21 +34,19 @@ function MobileMenu() {
                         <div className={"mobileMenuSidebar"}>
                             <div className={"languageSelector"}>
                                 {languages.map((lng) => {
-                                    if(lng !== i18n.language){
-                                        return(
-                                            <div onClick={() => {changeLanguage(lng)}}>{lng}</div>
-                                        )
-                                    }
+                                    return(
+                                        <div className={lng === i18n.language && "active"} onClick={() => {changeLanguage(lng)}}>{lng}</div>
+                                    )
                                 })}
                             </div>
                             {config.mobileMenuLinks.map((link) => {
                                 return (
                                     <Link to={link.link} data-text="Awesome" className="button" onClick={() => setMenuOpened(false)}>
-                                                <span className="material-symbols-outlined">
-                                                    {link.icon}
-                                                </span>
+                                        <span className="material-symbols-outlined">
+                                            {link.icon}
+                                        </span>
                                         <div>
-                                            {t("header" + link.name)}
+                                            {link.name}
                                         </div>
                                     </Link>
                                 );

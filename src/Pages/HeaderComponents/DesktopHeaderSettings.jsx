@@ -6,7 +6,7 @@ import {useEffect} from "react";
 
 function DesktopHeaderSettings() {
     const { t, i18n } = useTranslation();
-    const languages = ["eng", "est", "rus"]
+    const languages = ["eng", "est"]
 
     useEffect(() => {
         console.log(i18n.language)
@@ -16,11 +16,6 @@ function DesktopHeaderSettings() {
         i18n.changeLanguage(lng);
     }
 
-    function toggleTheme() {
-        console.log("change theme")
-    }
-
-    console.log(i18n)
     return (
         <div className={"settings"}>
             <Link to={"/contact"} className={"contactLink"}>
@@ -30,11 +25,9 @@ function DesktopHeaderSettings() {
             </Link>
             <div className={"languageSelector"}>
                 {languages.map((lng) => {
-                    if(lng !== i18n.language){
-                        return(
-                            <div onClick={() => {changeLanguage(lng)}}>{lng}</div>
-                        )
-                    }
+                    return(
+                        <div className={lng === i18n.language && "active"} onClick={() => {changeLanguage(lng)}}>{lng}</div>
+                    )
                 })}
             </div>
         </div>

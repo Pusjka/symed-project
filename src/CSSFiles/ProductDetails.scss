@@ -1,0 +1,123 @@
+@media screen and (min-width: 901px) {
+  .productDetailsPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: #000;
+    min-height: calc(100vh - 130px);
+    padding: 0 15%;
+    overflow: hidden;
+
+    .productDetailsPageWindow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 90%;
+      color: #000;
+      padding: 50px 5%;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 40px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      flex-wrap: nowrap;
+
+      img{
+        width: 37%;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .productTitleAndDescription{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 55%;
+
+        .productName{
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+
+        .productDescription{
+          font-size: 1.2rem;
+        }
+
+        .gradientLine {
+          height: 2px;
+          background: linear-gradient(to right, #bd1e22, #fff);
+          width: 100%;
+          margin: 12px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .productDetailsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    min-height: calc(100% - 105px);
+    color: #000;
+    padding: 0 5%;
+    overflow: auto;
+
+    .productDetailsPageWindow{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 90%;
+      color: #000;
+      padding: 20px;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      flex-wrap: nowrap;
+      margin-bottom: 20px;
+
+      img{
+        width: calc(100% - 20px);
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .productTitleAndDescription{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0 0;
+
+        .productName{
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+
+        .productDescription{
+          font-size: 1.1rem;
+        }
+
+        .gradientLine {
+          height: 2px;
+          background: linear-gradient(to right, #bd1e22, #fff);
+          width: 100%;
+          margin: 12px 0;
+        }
+      }
+    }
+  }
+}

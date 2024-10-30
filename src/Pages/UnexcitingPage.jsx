@@ -3,7 +3,7 @@ import {useEffect} from "react";
 function UnexcitingPage() {
 
     useEffect(() => {
-        window.location.href = '/portfolio'
+        window.location.href = '/'
     }, []);
 }
 

@@ -10,14 +10,20 @@ function DesktopLinks() {
         <div className={"desktopLinksAndLogo"}>
             <Link to={"/"}>
                     <span className="homeLogo">
-                        Symed
+                        <img src={'/Imgs/symed-logo.png'} alt="logo" />
                     </span>
             </Link>
             {config.desktopLinks.map((link) => {
                 return(
-                    <Link to={link.link} data-text="Awesome" className="button">
-                        <span className="actual-text">&nbsp;{t("header" + link.name)}&nbsp;</span>
-                        <span className="hover-text" aria-hidden="true">&nbsp;{t("header" + link.name)}&nbsp;</span>
+                    <Link to={link.link} className="button">
+                        {link.name}
+                        {link.name === "Catalog" &&
+                            <div className="dropdownMenu">
+                                {config.productCategory.map((category) => (
+                                    <Link to={category.link} className="dropdownLink">{category.name}</Link>
+                                ))}
+                            </div>
+                        }
                     </Link>
                 )
             })}
