@@ -16,7 +16,7 @@ import ProductDetails from "./Pages/ProductDetails.jsx";
 function App() {
 
     return (
-        <BrowserRouter basename="/">
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Header/>}>
                     <Route index element={<Home />}/>
