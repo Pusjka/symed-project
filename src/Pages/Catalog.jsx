@@ -27,7 +27,7 @@ function Catalog() {
                 {config.productsCatalog
                     .filter(product => !category || product.category.toLowerCase().replace(/\s/g, '') === category.toLowerCase().replace(/\s/g, ''))
                     .map(product => {
-                    let imgSrc = '/ProductsImgs/product_' + product.id + '/0.png';
+                    let imgSrc = `/ProductsImgs/product_${product.id}/0.png`;
                     let dayDifference = daysFromToday(product.dataOfAppearance);
                     return (
                         <Link to={'/product/' + product.id} className={"productWindow"} key={product.id}>

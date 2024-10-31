@@ -3,6 +3,7 @@ import {Link, useLocation} from "react-router-dom";
 import {useState} from "react";
 import '/src/CSSFiles/MobileMenu.scss'
 import {useTranslation} from "react-i18next";
+import logoPng from '../../../public/Imgs/symed-logo.png';
 
 function MobileMenu() {
     const [menuOpened, setMenuOpened] = useState(false)
@@ -18,7 +19,7 @@ function MobileMenu() {
             <div className={"menu"}>
                 <Link to={"/"} onClick={() => setMenuOpened(false)}>
                     <span className="homeLogo">
-                        <img src={'/Imgs/symed-logo.png'} alt="logo"/>
+                        <img src={logoPng} alt="logo"/>
                     </span>
                 </Link>
             </div>
