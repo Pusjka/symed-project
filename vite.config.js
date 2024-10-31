@@ -8,4 +8,4 @@ export default defineConfig({
     loader: 'jsx', // Ensures JSX is handled as JavaScript
     include: /\.jsx?$/,
   }
-})
+});

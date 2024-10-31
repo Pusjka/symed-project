@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import config from "../../Config.js";
 import '/src/CSSFiles/DesktopLinks.scss'
 import {useTranslation} from "react-i18next";
+import logoPng from '../../../public/Imgs/symed-logo.png';
 
 function DesktopLinks() {
     const { t, i18n } = useTranslation();
@@ -10,7 +11,7 @@ function DesktopLinks() {
         <div className={"desktopLinksAndLogo"}>
             <Link to={"/"}>
                     <span className="homeLogo">
-                        <img src={'/Imgs/symed-logo.png'} alt="logo" />
+                        <img src={logoPng} alt="logo" />
                     </span>
             </Link>
             {config.desktopLinks.map((link) => {
