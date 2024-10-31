@@ -5,7 +5,18 @@ export default defineConfig({
   plugins: [react()],
   base: "/symed-project/",
   esbuild: {
-    loader: 'jsx', // Ensures JSX is handled as JavaScript
-    include: /\.jsx?$/,
-  }
+    loader: 'jsx',
+  },
+  resolve: {
+    alias: {
+      './runtimeConfig': './runtimeConfig.browser',
+    },
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+      },
+    },
+  },
 });
