@@ -6,5 +6,12 @@ export default defineConfig({
   // base: "/",
   build: {
     target: 'esnext' // This will allow top-level await
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler' // or "modern"
+      }
+    }
   }
 });
