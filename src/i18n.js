@@ -6,8 +6,6 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        // we init with resources
-        // lng: 'en' // <--- turn off for detection to work
         resources: {
             eng: {
                 translations: {
@@ -130,72 +128,11 @@ i18n
                     "contactPageTooltipLinkedin": "Linkedin",
                     "contactPageTooltipMail": "Mail",
                 }
-            },
-            rus: {
-                translations: {
-                    "DesktopHeaderContact": "Контакты",
-                    "mySkillsReact": "React",
-                    "mySkillsFigma": "Figma",
-                    "mySkillsJavaScript": "JavaScript",
-                    "mySkillsHTML": "HTML",
-                    "mySkillsCSS/SCSS": "CSS/SCSS",
-                    "mySkillsRedux": "Redux",
-                    "mySkillsREST API": "REST API",
-                    "mySkillsGIT": "GIT",
-                    "mySkillsGithub": "Github",
-                    "mySkillsTerminal": "Terminal",
-                    "mySkillsResponsive Design": "Responsive Design",
-                    "findMoreInformationAboutMe": "Здесь вы можете найти больше информации обо мне, чем я занимаюсь и мои навыки относящиеся к программированию.",
-                    "About me": "Обо мне",
-                    "moreAboutMe": "Больше про меня",
-                    "mySkills": "Мои навыки",
-                    "headerProjects": "Проекты",
-                    "headerAbout": "Инфо",
-                    "headerResume": "Резюме",
-                    "headerContact": "Контакты",
-                    "aboutMeText1": "Я ",
-                    "aboutMeText2": "Фронт-Енд Разработчик",
-                    "aboutMeText3": " разрабатывающий Фронт-Енд различных сайтов и приложений. Вы можете посмотреть некоторые из моих работ на странице ",
-                    "aboutMeText4": "Проекты",
-                    "aboutMeText5": ".",
-                    "aboutMeText6": "Я начал учиться веб разработке около ",
-                    "aboutMeText7": "4 лет",
-                    "aboutMeText8": " назад, и на данный момент у меня уже ",
-                    "aboutMeText9": "3 года опыта",
-                    "aboutMeText10": " в разработке сайтов. В своих проектах я обычно использую ",
-                    "aboutMeText11": "React",
-                    "aboutMeText12": ". Так же я люблю обучаться новому и использовать это в своих новых проектах.",
-                    "aboutMeText13": "Я открыт для возможных предложений о работе, где я могу учиться и развиваться как ",
-                    "aboutMeText14": "Программист",
-                    "aboutMeText15": ". Если у вас есть какие то предложения которые совпадают с моими навыками и опытом, пожалуйста ",
-                    "aboutMeText16": "Свяжитесь",
-                    "aboutMeText17": " со мной",
-                    "resumePageTitle": "Резюме",
-                    "resumePageDescription": "Здесь вы можете найти моё резюме, при необходимости вы можете так же скачать его ниже.",
-                    "resumePageLoading": "Загрузка...",
-                    "resumePageDownload": "Скачать",
-                    "projectsPageKoolbetDescription": "Это сайт для ставок и онлайн игр. Я принимал участие в разработке некоторых страниц на этом сайте. Такие как Casino Lobby, Crash Games Lobby и Promotions. Так же я занимался редизайном и исправлением багов.",
-                    "projectsPageCrashCrashDescription": "Это сайт для онлайн игр. Этот проект ещё находится на стадии разработки. Я разрабатывал Фронт-Енд сторону этото проект с нуля в одиночку.",
-                    "projectsPageToolsUsed": "Использованные инструменты",
-                    "projectsPageViewSite": "Смотреть сайт",
-                    "projectsPageProjects": "Проекты",
-                    "homePageHello": "Здравствуйте, моё имя",
-                    "homePageMyName": "Михаил Золотарёв.",
-                    "homePageSecondLine": "Я Фронт Енд разработчик",
-                    "homePageDescription": "Я участвую в Веб разработке сайтов предназначенных для мобильных десктопных платформ.",
-                    "contactPageTitle": "Контакты",
-                    "contactPageDescription": "Можете смело Связываться со мной использую удобный для вас способ из представленных снизу и я постараюсь ответить так быстро как смогу.",
-                    "contactPageTooltipTelegram": "Телеграм",
-                    "contactPageTooltipInstagram": "Инстаграм",
-                    "contactPageTooltipTwitter": "Твиттер",
-                    "contactPageTooltipLinkedin": "Линкедин",
-                    "contactPageTooltipMail": "Майл",
-                }
             }
         },
         fallbackLng: "eng",
         debug: true,
-        supportedLngs: ['eng', 'est', 'rus'],
+        supportedLngs: ['eng', 'est'],
 
         // have a common namespace used around the full app
         ns: ["translations"],
