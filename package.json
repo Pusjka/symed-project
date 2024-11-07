@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "/symed-project",
+//  "homepage": "/symed-project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
