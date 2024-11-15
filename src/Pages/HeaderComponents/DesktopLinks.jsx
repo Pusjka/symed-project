@@ -18,13 +18,6 @@ function DesktopLinks() {
                 return(
                     <Link to={link.link} className="button">
                         {link.name}
-                        {link.name === "Catalog" &&
-                            <div className="dropdownMenu">
-                                {config.productCategory.map((category) => (
-                                    <Link to={category.link} className="dropdownLink">{category.name}</Link>
-                                ))}
-                            </div>
-                        }
                     </Link>
                 )
             })}

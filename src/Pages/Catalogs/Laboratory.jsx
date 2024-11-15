@@ -1,15 +1,13 @@
-import config from "../Config.js";
-import '/src/CSSFiles/Catalog.scss'
+import config from "../../Config.js";
+import '../../CSSFiles/Catalogs.scss'
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {Link, useParams} from "react-router-dom";
 
-function Catalog() {
+function Laboratory() {
     const { t, i18n } = useTranslation();
-    const { category } = useParams();
 
     useEffect(() => {
-        console.log(category);
     }, []);
 
     function daysFromToday(dateString) {
@@ -24,10 +22,8 @@ function Catalog() {
     return(
         <div className={"catalogPage"}>
             <div className={'products'}>
-                {config.productsCatalog
-                    .filter(product => !category || product.category.toLowerCase().replace(/\s/g, '') === category.toLowerCase().replace(/\s/g, ''))
-                    .map(product => {
-                    let imgSrc = `/ProductsImgs/product_${product.id}/0.png`;
+                {config.laboratoryProducts.filter(product => !product.disabled).map(product => {
+                    let imgSrc = `/ProductsImgs/Laboratory/product_${product.id}/0.png`;
                     let dayDifference = daysFromToday(product.dataOfAppearance);
                     return (
                         <Link to={'/product/' + product.id} className={"productWindow"} key={product.id}>
@@ -42,4 +38,4 @@ function Catalog() {
     )
 }
 
-export default Catalog
+export default Laboratory

@@ -7,9 +7,10 @@
     position: relative;
 
     .homeLogo{
-      margin-right: 20px;
+      margin-right: 30px;
       height: 44px;
       display: flex;
+      aspect-ratio: 1644 / 360 !important;
 
       img{
         height: 100%;
@@ -24,7 +25,7 @@
 
     .button {
       padding: 20px 20px;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       font-size: 22px;
       text-transform: capitalize;
       font-weight: 500;

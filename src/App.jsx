@@ -7,11 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UnexcitingPage from "../src/Pages/UnexcitingPage.jsx"
 import Header from "../src/Pages/Header.jsx"
 import Home from "./Pages/Home.jsx";
-import Resume from "./Pages/Resume.jsx";
-import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
-import Catalog from "./Pages/Catalog.jsx";
 import ProductDetails from "./Pages/ProductDetails.jsx";
+import Pharmacy from "./Pages/Catalogs/Pharmacy.jsx";
+import Laboratory from "./Pages/Catalogs/Laboratory.jsx";
+import Suppliers from "./Pages/Suppliers.jsx";
+import Hospital from "./Pages/Catalogs/Hospital.jsx";
 
 function App() {
 
@@ -20,11 +21,11 @@ function App() {
             <Routes>
                 <Route path="/" element={<Header/>}>
                     <Route index element={<Home />}/>
-                    <Route path="/catalog" element={<Catalog />}/>
-                    <Route path="/catalog/:category" element={<Catalog />}/>
-                    <Route path="/product/:id" element={<ProductDetails />} />
-                    <Route path="/resume" element={<Resume />}/>
-                    <Route path="/about" element={<About />}/>
+                    <Route path="/hospital" element={<Hospital />}/>
+                    <Route path="/pharmacy" element={<Pharmacy />}/>
+                    <Route path="/laboratory" element={<Laboratory />}/>
+                    <Route path="/suppliers" element={<Suppliers />}/>
+                    <Route path="/product/:category/:id" element={<ProductDetails />} />
                     <Route path="/contact" element={<Contact />}/>
                 </Route>
                 <Route path="/*" element={<UnexcitingPage />}/>

@@ -5,6 +5,7 @@ import DesktopHeaderSettings from "./HeaderComponents/DesktopHeaderSettings.jsx"
 import MobileMenu from "./HeaderComponents/MobileMenu.jsx";
 import '/src/CSSFiles/Header.scss'
 import {useEffect, useState} from "react";
+import Footer from "./Footer.jsx";
 
 function Header() {
     const [desktop, setDesktop] = useState(true)
@@ -39,6 +40,7 @@ function Header() {
                 </div>
             }
             <Outlet/>
+            <Footer/>
         </div>
     )
 }
